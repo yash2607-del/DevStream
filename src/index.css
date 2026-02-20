@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes ring-glow {
+  0%, 100% {
+    opacity: 0.3;
+    box-shadow: 0 0 60px rgba(200, 121, 65, 0.4), inset 0 0 60px rgba(200, 121, 65, 0.4);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 100px rgba(200, 121, 65, 0.4), inset 0 0 100px rgba(200, 121, 65, 0.4);
+  }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Utility classes for animations */
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+.animate-pulse-glow-reverse {
+  animation: pulse-glow 10s ease-in-out infinite reverse;
+}
+
+.animate-ring-glow {
+  animation: ring-glow 4s ease-in-out infinite;
+}
+
+.animate-bounce-arrow {
+  animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar - hidden */
+::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE/Edge */
+body {
+  -ms-overflow-style: none;
+}
