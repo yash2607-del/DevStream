@@ -1,6 +1,6 @@
 # DevStream Homepage
 
-This project is a Vite + React homepage that now pulls videos directly from your YouTube channel.
+This project is DevStream homepage that now pulls videos directly from your YouTube channel.
 
 ## What is implemented
 
